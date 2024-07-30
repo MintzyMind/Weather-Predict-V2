@@ -5,7 +5,7 @@ from PIL import Image
 import timm
 
 # Load your trained model checkpoint
-model_path = "D:\Big Data\Resource\spark-3.5.0-bin-hadoop3\examples\src\main\python\ml\mobilenetv3_large_100_checkpoint_fold1.pt"
+model_path = "mobilenetv3_large_100_checkpoint_fold1.pt"
 
 # Define the MobileNetV3 model from timm with the desired precision
 model = timm.create_model('mobilenetv3_large_100', pretrained=False, num_classes=3).to(dtype=torch.float32)
