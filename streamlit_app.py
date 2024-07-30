@@ -46,7 +46,7 @@ def predict(image):
         return predicted_class, confidence
 
 # Streamlit app
-st.title('Garbage Classification App')
+st.title('Weather Predict App')
 
 # File uploader
 uploaded_file = st.file_uploader("Choose an image...", type=["jpg", "png", "jpeg"])
@@ -57,7 +57,7 @@ if uploaded_file is not None:
     st.image(image, caption='Uploaded Image', use_column_width=True)
 
     # Make predictions on the uploaded image
-    if st.button('Classify'):
+    if st.button('Predict'):
         label, confidence = predict(uploaded_file)
         class_label = class_names[label]
         st.write(f"Predicted Class: {class_label}")
